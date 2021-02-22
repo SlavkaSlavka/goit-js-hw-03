@@ -1,13 +1,15 @@
 //Напиши функцию findBestEmployee(employees), которая принимает объект сотрудников 
 //и возвращает имя самого продуктивного (который выполнил больше всех задач).
 // Сотрудники и кол-во выполненых задач содержатся как свойства объекта в формате "имя":"кол-во задач".
-let bestEmployee;
+
 const findBestEmployee = function(employees) {
-  let valueBestEmployee = 0;
+  let bestEmployee;
+  let maxValue = 0;
  const entries = Object.entries(employees);
+ console.log(entries);
  for (const entrie of entries) {
-   if (entrie[1] > valueBestEmployee) {
-     valueBestEmployee = entrie[1];
+   if (entrie[1] > maxValue) {
+     maxValue = entrie[1];
      bestEmployee = entrie[0];
    }
   }

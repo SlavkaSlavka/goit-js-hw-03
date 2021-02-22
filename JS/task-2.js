@@ -2,7 +2,7 @@
 
 const countProps = function(obj) {
 const keys = Object.keys(obj);
-return `Количество свойств - ${keys.length}`;
+return  Number(keys.length);
 };
 
 /*
