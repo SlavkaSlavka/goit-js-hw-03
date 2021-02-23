@@ -90,15 +90,13 @@ const account = {
                 sumTypeTransaction += transaction.amount;
             }
 
-        }return `Total transacttion ${type} = ${sumTypeTransaction}`;
-
-
-
+        }return sumTypeTransaction;
+        //Вот, тоже не строку возвращает и понятно всё!!! :)
         
   },
 };
 
-
+// return this.transactions.filter((item) => item.type === type).reduce((prev,item) => item.amount +prev,0); 
 account.deposit(100);
 account.deposit(200);
 account.deposit(300);
