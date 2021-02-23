@@ -5,12 +5,12 @@
 const findBestEmployee = function(employees) {
   let bestEmployee;
   let maxValue = 0;
- const entries = Object.entries(employees);
- console.log(entries);
- for (const entrie of entries) {
-   if (entrie[1] > maxValue) {
-     maxValue = entrie[1];
-     bestEmployee = entrie[0];
+ 
+ 
+ for (const [name, result] of Object.entries(employees)){
+   if (result > maxValue) {
+     maxValue = result;
+     bestEmployee = name;
    }
   }
   return bestEmployee;
